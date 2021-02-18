@@ -7,6 +7,9 @@ txid = '63522845d294ee9b0188ae5cac91bf389a0c3723f084ca1025e7d9cdfe481ce1'
 rt = bdc.getrawtransaction(txid)
 print("Raw: %s" % rt)
 
+lastblockread = 0
+
 while(True):
+    print(bcd.blockcount())
     print("looping...")
     time.sleep(2)
