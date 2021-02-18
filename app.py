@@ -13,7 +13,7 @@ lastblockread = 0
 while(True):
     blockheight = bdc.blockcount()
     if lastblockread < blockheight:
-        block = bdc.getblock(lastblockread)
+        block = bdc.getblock(lastblockread, parse_transactions=False)
         print(json.dumps(block))
         lastblockread = lastblockread + 1
     print("looping...")
