@@ -14,7 +14,7 @@ while(True):
     blockheight = bdc.blockcount()
     if lastblockread < blockheight:
         block = bdc.getblock(lastblockread)
-        print(json.dumps(block.as_dict()))
+        print(json.dumps(block))
         lastblockread = lastblockread + 1
     print("looping...")
     time.sleep(2)
