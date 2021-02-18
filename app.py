@@ -10,6 +10,10 @@ print("Raw: %s" % rt)
 lastblockread = 0
 
 while(True):
-    print(bcd.blockcount())
+    blockheight = bdc.blockcount()
+    if lastblockread < blockheight:
+        block = bdc.getblock(lastblockread)
+        print(json.dumps(block.as_dict()))
+        lastblockread = lastblockread + 1
     print("looping...")
     time.sleep(2)
